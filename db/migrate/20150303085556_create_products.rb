@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :price
       t.date :released_on
       t.integer :rating
-      t.boolean :discontinued
+      t.boolean :discontinued, default: false, null: false
       t.references :publisher, index: true
 
       t.timestamps null: false
